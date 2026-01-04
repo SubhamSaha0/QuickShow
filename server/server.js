@@ -5,6 +5,7 @@ import connectDB from "./configs/db.js";
 import { clerkMiddleware } from '@clerk/express'
 import { serve } from "inngest/express";
 import { inngest, functions } from "./inngest/index.js"
+import userRouter from "./routers/user.router.js";
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -20,6 +21,8 @@ app.use("/api/inngest", serve({ client: inngest, functions }));
 app.get("/", (req, res) => {
   res.send("Server is up");
 });
+
+app.use("/api/v1/users", userRouter)
 
 app.listen(PORT, () => {
   console.log(`App is running on port ${PORT}`);
