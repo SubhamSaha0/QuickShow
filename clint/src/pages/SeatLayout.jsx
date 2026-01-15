@@ -3,10 +3,10 @@ import { useNavigate, useParams } from "react-router-dom";
 import { assets } from "../assets/assets";
 import Loading from "../components/Loading";
 import { ArrowRightIcon, ClockIcon } from "lucide-react";
-import isoTimeFormat from "../lib/isoTimeFormat";
 import BlurCircle from "../components/BlurCircle";
 import toast from "react-hot-toast";
 import { useAppContext } from "../context/AppContext";
+import ISOTimeFormat from "../lib/isoTimeFormat";
 
 const SeatLayout = () => {
   const groupRows = [
@@ -141,7 +141,7 @@ const SeatLayout = () => {
               }`}
             >
               <ClockIcon className="w-4 h-4" />
-              <p className="text-sm">{isoTimeFormat(item.time)}</p>
+              <p className="text-sm">{ISOTimeFormat(item.time)}</p>
             </div>
           ))}
         </div>
