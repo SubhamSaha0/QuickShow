@@ -101,10 +101,10 @@ const sendBookingConfirmationEmail = inngest.createFunction(
         <p>
           <strong>Date:</strong> ${new Date(
             booking.show.showDateTime
-          ).toLocaleDateString("en-US", { timeZone: "Africa/Kigali" })}<br />
+          ).toLocaleDateString("en-US", { timeZone: "Asia/Kolkata" })}<br />
           <strong>Time:</strong> ${new Date(
             booking.show.showDateTime
-          ).toLocaleTimeString("en-US", { timeZone: "Africa/Kigali" })}
+          ).toLocaleTimeString("en-US", { timeZone: "Asia/Kolkata" })}
         </p>
         <p>Enjoy the show! 🍿</p>
         <p>Thanks for booking with us!<br />- QuickShow Team</P>
@@ -171,10 +171,10 @@ const sendShowReminders = inngest.createFunction(
         <p>
           is scheduled for <strong>${new Date(task.showTime).toLocaleDateString(
             "en-US",
-            { timeZone: "Africa/Kigali" }
+            { timeZone: "Asia/Kolkata" }
           )}</strong> at
           <strong>${new Date(task.showTime).toLocaleTimeString("en-US", {
-            timeZone: "Africa/Kigali",
+            timeZone: "Asia/Kolkata",
           })}</strong>.
         </p>
         <p>It starts in approximately <strong>8 hours</strong> - make sure you're ready!</p>
